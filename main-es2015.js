@@ -576,21 +576,16 @@ CardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComp
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function() { return LoginComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _core_services_auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/services/auth.service */ "./src/app/core/services/auth.service.ts");
-
 
 
 class LoginComponent {
-    constructor(authService) {
-        this.authService = authService;
-    }
+    constructor() { }
     login() {
-        const redirectUrl = 'localhost';
-        const clientId = '9031bbfc20036dd75d11';
+        const clientId = '435bb3ee9ba9d983cb60';
         window.location.href = `https://github.com/login/oauth/authorize?scope=repo%20write%3Aorg%20user&client_id=${clientId}`;
     }
 }
-LoginComponent.ɵfac = function LoginComponent_Factory(t) { return new (t || LoginComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_core_services_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"])); };
+LoginComponent.ɵfac = function LoginComponent_Factory(t) { return new (t || LoginComponent)(); };
 LoginComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: LoginComponent, selectors: [["app-login"]], decls: 8, vars: 0, consts: [[1, "login"], [1, "login__button", 3, "click"], ["src", "/assets/images/GitHub-Mark-Light-32px.png"]], template: function LoginComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "h1");
@@ -613,7 +608,7 @@ LoginComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
                 templateUrl: '../views/login/login.component.html',
                 styleUrls: ['../views/login/login.component.styl'],
             }]
-    }], function () { return [{ type: _core_services_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"] }]; }, null); })();
+    }], function () { return []; }, null); })();
 
 
 /***/ }),
@@ -1032,7 +1027,14 @@ class GithubService {
                     return true;
                 }
                 else {
-                    const res = yield this.octokit.users.getAuthenticated();
+                    let res;
+                    try {
+                        res = yield this.octokit.users.getAuthenticated();
+                    }
+                    catch (err) {
+                        this.authService.logoutUser();
+                        return false;
+                    }
                     this.ghUser = res.data;
                     return true;
                 }

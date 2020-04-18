@@ -1246,25 +1246,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-    /* harmony import */
-
-
-    var _core_services_auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! ../core/services/auth.service */
-    "./src/app/core/services/auth.service.ts");
 
     var LoginComponent = /*#__PURE__*/function () {
-      function LoginComponent(authService) {
+      function LoginComponent() {
         _classCallCheck(this, LoginComponent);
-
-        this.authService = authService;
       }
 
       _createClass(LoginComponent, [{
         key: "login",
         value: function login() {
-          var redirectUrl = 'localhost';
-          var clientId = '9031bbfc20036dd75d11';
+          var clientId = '435bb3ee9ba9d983cb60';
           window.location.href = "https://github.com/login/oauth/authorize?scope=repo%20write%3Aorg%20user&client_id=".concat(clientId);
         }
       }]);
@@ -1273,7 +1264,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }();
 
     LoginComponent.ɵfac = function LoginComponent_Factory(t) {
-      return new (t || LoginComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_core_services_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"]));
+      return new (t || LoginComponent)();
     };
 
     LoginComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -1326,9 +1317,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           styleUrls: ['../views/login/login.component.styl']
         }]
       }], function () {
-        return [{
-          type: _core_services_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"]
-        }];
+        return [];
       }, null);
     })();
     /***/
@@ -2209,7 +2198,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 switch (_context4.prev = _context4.next) {
                   case 0:
                     if (!this.octokit) {
-                      _context4.next = 10;
+                      _context4.next = 17;
                       break;
                     }
 
@@ -2221,23 +2210,34 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     return _context4.abrupt("return", true);
 
                   case 5:
-                    _context4.next = 7;
+                    _context4.prev = 5;
+                    _context4.next = 8;
                     return this.octokit.users.getAuthenticated();
 
-                  case 7:
+                  case 8:
                     res = _context4.sent;
+                    _context4.next = 15;
+                    break;
+
+                  case 11:
+                    _context4.prev = 11;
+                    _context4.t0 = _context4["catch"](5);
+                    this.authService.logoutUser();
+                    return _context4.abrupt("return", false);
+
+                  case 15:
                     this.ghUser = res.data;
                     return _context4.abrupt("return", true);
 
-                  case 10:
+                  case 17:
                     return _context4.abrupt("return", false);
 
-                  case 11:
+                  case 18:
                   case "end":
                     return _context4.stop();
                 }
               }
-            }, _callee4, this);
+            }, _callee4, this, [[5, 11]]);
           }));
         }
       }, {
