@@ -993,7 +993,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GithubService", function() { return GithubService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _octokit_rest_dist_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @octokit/rest/dist-web */ "./node_modules/@octokit/rest/dist-web/index.js");
+/* harmony import */ var _octokit_rest__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @octokit/rest */ "./node_modules/@octokit/rest/dist-web/index.js");
 /* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./auth.service */ "./src/app/core/services/auth.service.ts");
 
 
@@ -1004,11 +1004,11 @@ class GithubService {
     constructor(authService) {
         this.authService = authService;
         if (authService.isLoggedIn()) {
-            this.octokit = new _octokit_rest_dist_web__WEBPACK_IMPORTED_MODULE_2__["Octokit"]({ auth: authService.getUser(), userAgent: '(pro)jects v.0.1.0' });
+            this.octokit = new _octokit_rest__WEBPACK_IMPORTED_MODULE_2__["Octokit"]({ auth: authService.getUser(), userAgent: '(pro)jects v.0.1.0' });
         }
         this.authService.loggedIn.subscribe(() => {
             if (this.authService.isLoggedIn()) {
-                this.octokit = new _octokit_rest_dist_web__WEBPACK_IMPORTED_MODULE_2__["Octokit"]({
+                this.octokit = new _octokit_rest__WEBPACK_IMPORTED_MODULE_2__["Octokit"]({
                     auth: authService.getUser(),
                     userAgent: '(pro)jects v.0.1.0',
                 });

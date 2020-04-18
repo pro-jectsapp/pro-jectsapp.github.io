@@ -2148,8 +2148,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _octokit_rest_dist_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @octokit/rest/dist-web */
+    var _octokit_rest__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @octokit/rest */
     "./node_modules/@octokit/rest/dist-web/index.js");
     /* harmony import */
 
@@ -2167,7 +2167,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.authService = authService;
 
         if (authService.isLoggedIn()) {
-          this.octokit = new _octokit_rest_dist_web__WEBPACK_IMPORTED_MODULE_2__["Octokit"]({
+          this.octokit = new _octokit_rest__WEBPACK_IMPORTED_MODULE_2__["Octokit"]({
             auth: authService.getUser(),
             userAgent: '(pro)jects v.0.1.0'
           });
@@ -2175,7 +2175,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         this.authService.loggedIn.subscribe(function () {
           if (_this6.authService.isLoggedIn()) {
-            _this6.octokit = new _octokit_rest_dist_web__WEBPACK_IMPORTED_MODULE_2__["Octokit"]({
+            _this6.octokit = new _octokit_rest__WEBPACK_IMPORTED_MODULE_2__["Octokit"]({
               auth: authService.getUser(),
               userAgent: '(pro)jects v.0.1.0'
             });
