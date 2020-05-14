@@ -244,6 +244,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _components_login_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
     /*! ./components/login.component */
     "./src/app/components/login.component.ts");
+    /* harmony import */
+
+
+    var _core_services_fav_service__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
+    /*! ./core/services/fav.service */
+    "./src/app/core/services/fav.service.ts");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
@@ -257,7 +263,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       factory: function AppModule_Factory(t) {
         return new (t || AppModule)();
       },
-      providers: [_core_services_auth_service__WEBPACK_IMPORTED_MODULE_17__["AuthService"], _core_services_github_service__WEBPACK_IMPORTED_MODULE_11__["GithubService"], _core_services_project_service__WEBPACK_IMPORTED_MODULE_12__["ProjectService"]],
+      providers: [_core_services_auth_service__WEBPACK_IMPORTED_MODULE_17__["AuthService"], _core_services_github_service__WEBPACK_IMPORTED_MODULE_11__["GithubService"], _core_services_project_service__WEBPACK_IMPORTED_MODULE_12__["ProjectService"], _core_services_fav_service__WEBPACK_IMPORTED_MODULE_19__["FavService"]],
       imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], angular_split__WEBPACK_IMPORTED_MODULE_6__["AngularSplitModule"].forRoot(), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_4__["MatIconModule"], ngx_monaco_editor__WEBPACK_IMPORTED_MODULE_7__["MonacoEditorModule"].forRoot(), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_5__["MatProgressSpinnerModule"]]]
     });
 
@@ -276,7 +282,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         args: [{
           declarations: [_components_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _components_projects_list_component__WEBPACK_IMPORTED_MODULE_10__["ProjectsListComponent"], _components_project_view_component__WEBPACK_IMPORTED_MODULE_13__["ProjectViewComponent"], _core_utils_markdown_parse_pipe__WEBPACK_IMPORTED_MODULE_14__["MarkdownParsePipe"], _core_utils_safe_html_pipe__WEBPACK_IMPORTED_MODULE_15__["SafeHtmlPipe"], _components_card_component__WEBPACK_IMPORTED_MODULE_16__["CardComponent"], _components_login_component__WEBPACK_IMPORTED_MODULE_18__["LoginComponent"]],
           imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], angular_split__WEBPACK_IMPORTED_MODULE_6__["AngularSplitModule"].forRoot(), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_4__["MatIconModule"], ngx_monaco_editor__WEBPACK_IMPORTED_MODULE_7__["MonacoEditorModule"].forRoot(), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_5__["MatProgressSpinnerModule"]],
-          providers: [_core_services_auth_service__WEBPACK_IMPORTED_MODULE_17__["AuthService"], _core_services_github_service__WEBPACK_IMPORTED_MODULE_11__["GithubService"], _core_services_project_service__WEBPACK_IMPORTED_MODULE_12__["ProjectService"]],
+          providers: [_core_services_auth_service__WEBPACK_IMPORTED_MODULE_17__["AuthService"], _core_services_github_service__WEBPACK_IMPORTED_MODULE_11__["GithubService"], _core_services_project_service__WEBPACK_IMPORTED_MODULE_12__["ProjectService"], _core_services_fav_service__WEBPACK_IMPORTED_MODULE_19__["FavService"]],
           bootstrap: [_components_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
         }]
       }], null, null);
@@ -1426,15 +1432,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @angular/material/icon */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/icon.js");
 
-    function ProjectViewComponent_div_0_li_14_Template(rf, ctx) {
+    function ProjectViewComponent_div_0_li_9_Template(rf, ctx) {
       if (rf & 1) {
         var _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "li", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "li", 10);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 11);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ProjectViewComponent_div_0_li_14_Template_div_click_1_listener() {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ProjectViewComponent_div_0_li_9_Template_div_click_1_listener() {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r8);
 
           var i_r6 = ctx.index;
@@ -1448,9 +1454,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "span", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "span", 12);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ProjectViewComponent_div_0_li_14_Template_span_click_3_listener() {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ProjectViewComponent_div_0_li_9_Template_span_click_3_listener() {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r8);
 
           var column_r5 = ctx.$implicit;
@@ -1481,13 +1487,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function ProjectViewComponent_div_0_div_15_app_card_1_Template(rf, ctx) {
+    function ProjectViewComponent_div_0_div_10_app_card_1_Template(rf, ctx) {
       if (rf & 1) {
         var _r14 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "app-card", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "app-card", 16);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("moveUp", function ProjectViewComponent_div_0_div_15_app_card_1_Template_app_card_moveUp_0_listener() {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("moveUp", function ProjectViewComponent_div_0_div_10_app_card_1_Template_app_card_moveUp_0_listener() {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r14);
 
           var card_r11 = ctx.$implicit;
@@ -1496,7 +1502,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3);
 
           return ctx_r13.moveCard(card_r11, i_r12 - 1, i_r12);
-        })("moveDown", function ProjectViewComponent_div_0_div_15_app_card_1_Template_app_card_moveDown_0_listener() {
+        })("moveDown", function ProjectViewComponent_div_0_div_10_app_card_1_Template_app_card_moveDown_0_listener() {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r14);
 
           var card_r11 = ctx.$implicit;
@@ -1505,7 +1511,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3);
 
           return ctx_r15.moveCard(card_r11, i_r12 + 1, i_r12);
-        })("delete", function ProjectViewComponent_div_0_div_15_app_card_1_Template_app_card_delete_0_listener() {
+        })("delete", function ProjectViewComponent_div_0_div_10_app_card_1_Template_app_card_delete_0_listener() {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r14);
 
           var card_r11 = ctx.$implicit;
@@ -1528,17 +1534,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function ProjectViewComponent_div_0_div_15_Template(rf, ctx) {
+    function ProjectViewComponent_div_0_div_10_Template(rf, ctx) {
       if (rf & 1) {
         var _r18 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 13);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, ProjectViewComponent_div_0_div_15_app_card_1_Template, 1, 2, "app-card", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, ProjectViewComponent_div_0_div_10_app_card_1_Template, 1, 2, "app-card", 14);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "button", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "button", 15);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ProjectViewComponent_div_0_div_15_Template_button_click_2_listener() {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ProjectViewComponent_div_0_div_10_Template_button_click_2_listener() {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r18);
 
           var ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
@@ -1570,73 +1576,41 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 3);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-icon", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 4);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ProjectViewComponent_div_0_Template_mat_icon_click_2_listener() {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 5);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "Column");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "mat-icon", 6);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ProjectViewComponent_div_0_Template_mat_icon_click_6_listener() {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r20);
 
           var ctx_r19 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-          return ctx_r19.setViewMode(0);
+          return ctx_r19.addColumn();
         });
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "vertical_split");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "mat-icon", 5);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ProjectViewComponent_div_0_Template_mat_icon_click_4_listener() {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r20);
-
-          var ctx_r21 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-
-          return ctx_r21.setViewMode(1);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "dashboard");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "add");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "ul", 7);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 7);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 8);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "span");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Column");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "mat-icon", 9);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ProjectViewComponent_div_0_Template_mat_icon_click_11_listener() {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r20);
-
-          var ctx_r22 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-
-          return ctx_r22.addColumn();
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "add");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](9, ProjectViewComponent_div_0_li_9_Template, 5, 3, "li", 8);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "ul", 10);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](14, ProjectViewComponent_div_0_li_14_Template, 5, 3, "li", 11);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](15, ProjectViewComponent_div_0_div_15_Template, 4, 1, "div", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](10, ProjectViewComponent_div_0_div_10_Template, 4, 1, "div", 9);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -1646,15 +1620,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 2) {
         var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r0.viewMode === 0 ? "project-view-bar__icon--active" : "");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r0.viewMode === 1 ? "project-view-bar__icon--active" : "");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](9);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r0.projectService.currentProject.columns);
 
@@ -1666,7 +1632,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function ProjectViewComponent_ng_template_1_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 17);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " No project selected ");
 
@@ -1679,13 +1645,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       this.splice(to, 0, this.splice(from, 1)[0]);
     };
 
-    var ViewMode;
-
-    (function (ViewMode) {
-      ViewMode[ViewMode["Switch"] = 0] = "Switch";
-      ViewMode[ViewMode["Columns"] = 1] = "Columns";
-    })(ViewMode || (ViewMode = {}));
-
     var ProjectViewComponent = /*#__PURE__*/function () {
       function ProjectViewComponent(projectService, githubService) {
         _classCallCheck(this, ProjectViewComponent);
@@ -1693,7 +1652,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.projectService = projectService;
         this.githubService = githubService;
         this.columnSelected = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        this.viewMode = ViewMode.Switch;
       }
 
       _createClass(ProjectViewComponent, [{
@@ -1753,13 +1711,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
         }
       }, {
-        key: "setViewMode",
-        value: function setViewMode(mode) {
-          if (mode !== this.viewMode) {
-            this.viewMode = mode;
-          }
-        }
-      }, {
         key: "addColumn",
         value: function addColumn() {
           var _this3 = this;
@@ -1767,8 +1718,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var name = prompt('Give title for the column');
 
           if (name && name !== '') {
-            this.githubService.createColumn(this.projectService.currentProject.id, name).then(function () {
-              _this3.projectService.refreshProjectColumns();
+            this.githubService.createColumn(this.projectService.currentProject.id, name).then(function (_ref) {
+              var data = _ref.data;
+
+              _this3.projectService.refreshProjectColumns().then(function () {
+                var index = _this3.projectService.currentProject.columns.findIndex(function (col) {
+                  return col.id === data.id;
+                });
+
+                _this3.onColumnClicked(index);
+              });
             });
           }
         }
@@ -1827,10 +1786,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       },
       decls: 3,
       vars: 2,
-      consts: [["class", "project-view__wrapper", 4, "ngIf", "ngIfElse"], ["noProjectBlock", ""], [1, "project-view__wrapper"], [1, "project-view-bar"], ["title", "Column Switch View", 1, "project-view-bar__icon", 2, "transform", "scale(1.25)", 3, "click"], ["title", "Column View", 1, "project-view-bar__icon", 3, "click"], [1, "project-view"], [1, "columns-list__wrapper"], [1, "columns-list__header"], [2, "width", "12px", "height", "12px", "font-size", "12px", "transform", "scale(1.25)", "cursor", "pointer", 3, "click"], [1, "columns-list"], ["class", "columns-list__item__wrapper", 3, "class", 4, "ngFor", "ngForOf"], ["class", "cards-view cards-view--switch-view", 4, "ngIf"], [1, "columns-list__item__wrapper"], [1, "columns-list__item", 3, "click"], [1, "delete-button", 3, "click"], [1, "cards-view", "cards-view--switch-view"], [3, "card", "column", "moveUp", "moveDown", "delete", 4, "ngFor", "ngForOf"], [1, "cards-view__add-button", 3, "click"], [3, "card", "column", "moveUp", "moveDown", "delete"], [1, "no-project"]],
+      consts: [["class", "project-view__wrapper", 4, "ngIf", "ngIfElse"], ["noProjectBlock", ""], [1, "project-view__wrapper"], [1, "project-view"], [1, "columns-list__wrapper"], [1, "columns-list__header"], [2, "width", "12px", "height", "12px", "font-size", "12px", "transform", "scale(1.25)", "cursor", "pointer", 3, "click"], [1, "columns-list"], ["class", "columns-list__item__wrapper", 3, "class", 4, "ngFor", "ngForOf"], ["class", "cards-view cards-view--switch-view", 4, "ngIf"], [1, "columns-list__item__wrapper"], [1, "columns-list__item", 3, "click"], [1, "delete-button", 3, "click"], [1, "cards-view", "cards-view--switch-view"], [3, "card", "column", "moveUp", "moveDown", "delete", 4, "ngFor", "ngForOf"], [1, "cards-view__add-button", 3, "click"], [3, "card", "column", "moveUp", "moveDown", "delete"], [1, "no-project"]],
       template: function ProjectViewComponent_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, ProjectViewComponent_div_0_Template, 16, 6, "div", 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, ProjectViewComponent_div_0_Template, 11, 2, "div", 0);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, ProjectViewComponent_ng_template_1_Template, 2, 0, "ng-template", null, 1, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
         }
@@ -1916,11 +1875,81 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _core_services_fav_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../core/services/fav.service */
+    "./src/app/core/services/fav.service.ts");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     function ProjectsListComponent_div_3_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 4);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " You haven't added any favourite projects ");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      }
+    }
+
+    function ProjectsListComponent_div_5_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 5);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "img", 6);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "span", 7);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ProjectsListComponent_div_5_Template_span_click_2_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r6);
+
+          var project_r4 = ctx.$implicit;
+
+          var ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+          return ctx_r5.onProjectClicked(project_r4.id);
+        });
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnamespaceSVG"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "svg", 8);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ProjectsListComponent_div_5_Template__svg_svg_click_4_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r6);
+
+          var project_r4 = ctx.$implicit;
+
+          var ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+          return ctx_r7.removeFavProject(project_r4.id);
+        });
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "path", 9);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      }
+
+      if (rf & 2) {
+        var project_r4 = ctx.$implicit;
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", project_r4.name, " ");
+      }
+    }
+
+    function ProjectsListComponent_div_8_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 4);
 
@@ -1930,25 +1959,45 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function ProjectsListComponent_li_5_Template(rf, ctx) {
+    function ProjectsListComponent_div_10_Template(rf, ctx) {
       if (rf & 1) {
-        var _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+        var _r10 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "li", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 5);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "span", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "img", 10);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ProjectsListComponent_li_5_Template_span_click_1_listener() {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "span", 7);
 
-          var project_r2 = ctx.$implicit;
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ProjectsListComponent_div_10_Template_span_click_2_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r10);
 
-          var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+          var project_r8 = ctx.$implicit;
 
-          return ctx_r3.onProjectClicked(project_r2.id);
+          var ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+          return ctx_r9.onProjectClicked(project_r8.id);
         });
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnamespaceSVG"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "svg", 11);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ProjectsListComponent_div_10_Template__svg_svg_click_4_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r10);
+
+          var project_r8 = ctx.$implicit;
+
+          var ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+          return ctx_r11.favProject(project_r8.id);
+        });
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "path", 12);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -1956,22 +2005,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var project_r2 = ctx.$implicit;
+        var project_r8 = ctx.$implicit;
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](project_r2.name);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", project_r8.name, " ");
       }
     }
 
     var ProjectsListComponent = /*#__PURE__*/function () {
-      function ProjectsListComponent(githubService, projectService) {
+      function ProjectsListComponent(githubService, projectService, favService) {
         _classCallCheck(this, ProjectsListComponent);
 
         this.githubService = githubService;
         this.projectService = projectService;
+        this.favService = favService;
         this.userProjects = [];
-        this.orgProjects = [];
       }
 
       _createClass(ProjectsListComponent, [{
@@ -1986,6 +2035,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           this.githubService.getUserProjects().then(function (projects) {
             _this5.userProjects = projects;
+
+            _this5.favService.getFavProjects();
           });
         }
       }, {
@@ -1993,36 +2044,62 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function onProjectClicked(projectId) {
           this.projectService.setCurrentProject(projectId);
         }
+      }, {
+        key: "favProject",
+        value: function favProject(projectId) {
+          this.favService.addFavProject(this.userProjects.find(function (proj) {
+            return proj.id === projectId;
+          }));
+        }
+      }, {
+        key: "removeFavProject",
+        value: function removeFavProject(projectId) {
+          this.favService.removeFavProject(projectId);
+        }
       }]);
 
       return ProjectsListComponent;
     }();
 
     ProjectsListComponent.ɵfac = function ProjectsListComponent_Factory(t) {
-      return new (t || ProjectsListComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_core_services_github_service__WEBPACK_IMPORTED_MODULE_1__["GithubService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_core_services_project_service__WEBPACK_IMPORTED_MODULE_2__["ProjectService"]));
+      return new (t || ProjectsListComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_core_services_github_service__WEBPACK_IMPORTED_MODULE_1__["GithubService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_core_services_project_service__WEBPACK_IMPORTED_MODULE_2__["ProjectService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_core_services_fav_service__WEBPACK_IMPORTED_MODULE_3__["FavService"]));
     };
 
     ProjectsListComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: ProjectsListComponent,
       selectors: [["app-projects-list"]],
-      decls: 6,
-      vars: 2,
-      consts: [[1, "projects-list__wrapper"], ["class", "projects-list__empty-caption", 4, "ngIf"], [1, "projects-list"], ["class", "projects-list__item", 4, "ngFor", "ngForOf"], [1, "projects-list__empty-caption"], [1, "projects-list__item"], [3, "click"]],
+      decls: 11,
+      vars: 4,
+      consts: [[1, "projects-list__wrapper"], ["class", "projects-list__empty-caption", 4, "ngIf"], [1, "projects-list"], ["class", "projects-list__item", 4, "ngFor", "ngForOf"], [1, "projects-list__empty-caption"], [1, "projects-list__item"], ["src", "/assets/images/GitHub-Star.svg", "alt", "star", 1, "projects-list__item__icon"], [1, "projects-list__item__label", 3, "click"], ["xmlns", "http://www.w3.org/2000/svg", "viewBox", "0 0 12 16", "width", "12", "height", "16", 1, "projects-list__item__action", 3, "click"], ["fill-rule", "evenodd", "d", "M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"], ["src", "/assets/images/GitHub-Project.svg", "alt", "githubProject", 1, "projects-list__item__icon"], ["xmlns", "http://www.w3.org/2000/svg", "viewBox", "0 0 14 16", "width", "14", "height", "16", 1, "projects-list__item__action", 3, "click"], ["fill-rule", "evenodd", "d", "M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"]],
       template: function ProjectsListComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "h3");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "User's projects");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Favourite projects");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, ProjectsListComponent_div_3_Template, 2, 0, "div", 1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "ul", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, ProjectsListComponent_li_5_Template, 3, 1, "li", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, ProjectsListComponent_div_5_Template, 6, 1, "div", 3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "h3");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "User's projects");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, ProjectsListComponent_div_8_Template, 2, 0, "div", 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](10, ProjectsListComponent_div_10_Template, 6, 1, "div", 3);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -2032,6 +2109,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         if (rf & 2) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.favService.favProjects.length);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.favService.favProjects);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.userProjects.length);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
@@ -2039,8 +2124,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.userProjects);
         }
       },
-      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"]],
-      styles: [".projects-list__wrapper[_ngcontent-%COMP%] {\n  padding: 10px;\n}\n.projects-list__wrapper[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  margin: 0;\n}\n.projects-list__empty-caption[_ngcontent-%COMP%] {\n  color: #808080;\n  margin: 5px 0 0 1em;\n  font-size: 0.8em;\n}\n.projects-list[_ngcontent-%COMP%] {\n  margin-top: 5px;\n  overflow: auto;\n}\n.projects-list[_ngcontent-%COMP%]   .projects-list__item[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  color: #0366d6;\n  text-decoration: none;\n  font-weight: 600;\n  cursor: pointer;\n}\n.projects-list[_ngcontent-%COMP%]   .projects-list__item[_ngcontent-%COMP%]   span[_ngcontent-%COMP%]:hover {\n  text-decoration: underline;\n}\n/*# sourceMappingURL=src/app/views/projects-list/projects-list.component.css.map */\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdmlld3MvcHJvamVjdHMtbGlzdC9zcmMvYXBwL3ZpZXdzL3Byb2plY3RzLWxpc3QvcHJvamVjdHMtbGlzdC5jb21wb25lbnQuc3R5bCIsInNyYy9hcHAvdmlld3MvcHJvamVjdHMtbGlzdC9wcm9qZWN0cy1saXN0LmNvbXBvbmVudC5zdHlsIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBUztBQ0NYO0FEQ0U7RUFDRSxTQUFRO0FDQ1o7QURDQTtFQUNFLGNBQU87RUFDUCxtQkFBUTtFQUNSLGdCQUFXO0FDQ2I7QURDQTtFQUNFLGVBQVk7RUFDWixjQUFVO0FDQ1o7QURFSTtFQUNFLGNBQU87RUFDUCxxQkFBaUI7RUFDakIsZ0JBQWE7RUFDYixlQUFRO0FDQWQ7QURFTTtFQUNFLDBCQUFpQjtBQ0F6QjtBQUNBLGtGQUFrRiIsImZpbGUiOiJzcmMvYXBwL3ZpZXdzL3Byb2plY3RzLWxpc3QvcHJvamVjdHMtbGlzdC5jb21wb25lbnQuc3R5bCIsInNvdXJjZXNDb250ZW50IjpbIi5wcm9qZWN0cy1saXN0X193cmFwcGVyXG4gIHBhZGRpbmc6IDEwcHhcblxuICBoM1xuICAgIG1hcmdpbjogMFxuXG4ucHJvamVjdHMtbGlzdF9fZW1wdHktY2FwdGlvblxuICBjb2xvcjogZ3JheVxuICBtYXJnaW46IDVweCAwIDAgMWVtXG4gIGZvbnQtc2l6ZTogLjhlbVxuXG4ucHJvamVjdHMtbGlzdFxuICBtYXJnaW4tdG9wOiA1cHhcbiAgb3ZlcmZsb3c6IGF1dG9cblxuICAucHJvamVjdHMtbGlzdF9faXRlbVxuICAgIHNwYW5cbiAgICAgIGNvbG9yOiAjMDM2NmQ2XG4gICAgICB0ZXh0LWRlY29yYXRpb246IG5vbmVcbiAgICAgIGZvbnQtd2VpZ2h0OiA2MDBcbiAgICAgIGN1cnNvcjogcG9pbnRlclxuXG4gICAgICAmOmhvdmVyXG4gICAgICAgIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lXG4iLCIucHJvamVjdHMtbGlzdF9fd3JhcHBlciB7XG4gIHBhZGRpbmc6IDEwcHg7XG59XG4ucHJvamVjdHMtbGlzdF9fd3JhcHBlciBoMyB7XG4gIG1hcmdpbjogMDtcbn1cbi5wcm9qZWN0cy1saXN0X19lbXB0eS1jYXB0aW9uIHtcbiAgY29sb3I6ICM4MDgwODA7XG4gIG1hcmdpbjogNXB4IDAgMCAxZW07XG4gIGZvbnQtc2l6ZTogMC44ZW07XG59XG4ucHJvamVjdHMtbGlzdCB7XG4gIG1hcmdpbi10b3A6IDVweDtcbiAgb3ZlcmZsb3c6IGF1dG87XG59XG4ucHJvamVjdHMtbGlzdCAucHJvamVjdHMtbGlzdF9faXRlbSBzcGFuIHtcbiAgY29sb3I6ICMwMzY2ZDY7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuLnByb2plY3RzLWxpc3QgLnByb2plY3RzLWxpc3RfX2l0ZW0gc3Bhbjpob3ZlciB7XG4gIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xufVxuLyojIHNvdXJjZU1hcHBpbmdVUkw9c3JjL2FwcC92aWV3cy9wcm9qZWN0cy1saXN0L3Byb2plY3RzLWxpc3QuY29tcG9uZW50LmNzcy5tYXAgKi8iXX0= */"]
+      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"]],
+      styles: [".projects-list__wrapper[_ngcontent-%COMP%] {\n  padding: 10px;\n}\n.projects-list__wrapper[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  margin: 0;\n}\n.projects-list__empty-caption[_ngcontent-%COMP%] {\n  color: #808080;\n  margin: 5px 0 5px 1em;\n  font-size: 0.8em;\n}\n.projects-list[_ngcontent-%COMP%] {\n  margin-top: 5px;\n  padding-left: 10px;\n  margin-bottom: 10px;\n  overflow: auto;\n}\n.projects-list[_ngcontent-%COMP%]   .projects-list__item[_ngcontent-%COMP%] {\n  position: relative;\n  padding-right: 20px;\n}\n.projects-list[_ngcontent-%COMP%]   .projects-list__item__icon[_ngcontent-%COMP%] {\n  height: 1rem;\n  vertical-align: -10%;\n}\n.projects-list[_ngcontent-%COMP%]   .projects-list__item__label[_ngcontent-%COMP%] {\n  color: #0366d6;\n  display: inline-block;\n  font-weight: 600;\n  cursor: pointer;\n  margin-left: 10px;\n}\n.projects-list[_ngcontent-%COMP%]   .projects-list__item__label[_ngcontent-%COMP%]:hover {\n  text-decoration: underline;\n}\n.projects-list[_ngcontent-%COMP%]   .projects-list__item__action[_ngcontent-%COMP%] {\n  visibility: hidden;\n  display: inline-flex;\n  align-items: center;\n  cursor: pointer;\n  height: 100%;\n  position: absolute;\n  margin-left: 5px;\n  fill: #d3d4d5;\n}\n.projects-list[_ngcontent-%COMP%]   .projects-list__item__action[_ngcontent-%COMP%]:hover {\n  fill: #b1b2b3;\n}\n.projects-list[_ngcontent-%COMP%]   .projects-list__item[_ngcontent-%COMP%]:hover   .projects-list__item__action[_ngcontent-%COMP%] {\n  visibility: visible;\n}\n/*# sourceMappingURL=src/app/views/projects-list/projects-list.component.css.map */\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdmlld3MvcHJvamVjdHMtbGlzdC9zcmMvYXBwL3ZpZXdzL3Byb2plY3RzLWxpc3QvcHJvamVjdHMtbGlzdC5jb21wb25lbnQuc3R5bCIsInNyYy9hcHAvdmlld3MvcHJvamVjdHMtbGlzdC9wcm9qZWN0cy1saXN0LmNvbXBvbmVudC5zdHlsIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBUztBQ0NYO0FEQ0U7RUFDRSxTQUFRO0FDQ1o7QURDQTtFQUNFLGNBQU87RUFDUCxxQkFBUTtFQUNSLGdCQUFXO0FDQ2I7QURDQTtFQUNFLGVBQVk7RUFDWixrQkFBYztFQUNkLG1CQUFlO0VBQ2YsY0FBVTtBQ0NaO0FEQ0U7RUFDRSxrQkFBVTtFQUNWLG1CQUFlO0FDQ25CO0FEQ0k7RUFDRSxZQUFRO0VBQ1Isb0JBQWdCO0FDQ3RCO0FEQ0k7RUFDRSxjQUFPO0VBQ1AscUJBQVM7RUFDVCxnQkFBYTtFQUNiLGVBQVE7RUFDUixpQkFBYTtBQ0NuQjtBRENNO0VBQ0UsMEJBQWlCO0FDQ3pCO0FEQ0k7RUFDRSxrQkFBWTtFQUNaLG9CQUFTO0VBQ1QsbUJBQWE7RUFDYixlQUFRO0VBQ1IsWUFBUTtFQUNSLGtCQUFVO0VBQ1YsZ0JBQWE7RUFDYixhQUFNO0FDQ1o7QURDTTtFQUNFLGFBQU07QUNDZDtBREVNO0VBQ0UsbUJBQVk7QUNBcEI7QUFDQSxrRkFBa0YiLCJmaWxlIjoic3JjL2FwcC92aWV3cy9wcm9qZWN0cy1saXN0L3Byb2plY3RzLWxpc3QuY29tcG9uZW50LnN0eWwiLCJzb3VyY2VzQ29udGVudCI6WyIucHJvamVjdHMtbGlzdF9fd3JhcHBlclxuICBwYWRkaW5nOiAxMHB4XG5cbiAgaDNcbiAgICBtYXJnaW46IDBcblxuLnByb2plY3RzLWxpc3RfX2VtcHR5LWNhcHRpb25cbiAgY29sb3I6IGdyYXlcbiAgbWFyZ2luOiA1cHggMCA1cHggMWVtXG4gIGZvbnQtc2l6ZTogLjhlbVxuXG4ucHJvamVjdHMtbGlzdFxuICBtYXJnaW4tdG9wOiA1cHhcbiAgcGFkZGluZy1sZWZ0OiAxMHB4XG4gIG1hcmdpbi1ib3R0b206IDEwcHg7XG4gIG92ZXJmbG93OiBhdXRvXG5cbiAgLnByb2plY3RzLWxpc3RfX2l0ZW1cbiAgICBwb3NpdGlvbjogcmVsYXRpdmVcbiAgICBwYWRkaW5nLXJpZ2h0OiAyMHB4XG5cbiAgICAmX19pY29uXG4gICAgICBoZWlnaHQ6IDFyZW1cbiAgICAgIHZlcnRpY2FsLWFsaWduOiAtMTAlXG5cbiAgICAmX19sYWJlbFxuICAgICAgY29sb3I6ICMwMzY2ZDZcbiAgICAgIGRpc3BsYXk6IGlubGluZS1ibG9ja1xuICAgICAgZm9udC13ZWlnaHQ6IDYwMFxuICAgICAgY3Vyc29yOiBwb2ludGVyXG4gICAgICBtYXJnaW4tbGVmdDogMTBweFxuXG4gICAgICAmOmhvdmVyXG4gICAgICAgIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lXG5cbiAgICAmX19hY3Rpb25cbiAgICAgIHZpc2liaWxpdHk6IGhpZGRlblxuICAgICAgZGlzcGxheTogaW5saW5lLWZsZXhcbiAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXJcbiAgICAgIGN1cnNvcjogcG9pbnRlclxuICAgICAgaGVpZ2h0OiAxMDAlXG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGVcbiAgICAgIG1hcmdpbi1sZWZ0OiA1cHhcbiAgICAgIGZpbGw6ICNkM2Q0ZDVcblxuICAgICAgJjpob3ZlclxuICAgICAgICBmaWxsOiAjYjFiMmIzXG5cbiAgICAmOmhvdmVyXG4gICAgICAucHJvamVjdHMtbGlzdF9faXRlbV9fYWN0aW9uXG4gICAgICAgIHZpc2liaWxpdHk6IHZpc2libGVcbiIsIi5wcm9qZWN0cy1saXN0X193cmFwcGVyIHtcbiAgcGFkZGluZzogMTBweDtcbn1cbi5wcm9qZWN0cy1saXN0X193cmFwcGVyIGgzIHtcbiAgbWFyZ2luOiAwO1xufVxuLnByb2plY3RzLWxpc3RfX2VtcHR5LWNhcHRpb24ge1xuICBjb2xvcjogIzgwODA4MDtcbiAgbWFyZ2luOiA1cHggMCA1cHggMWVtO1xuICBmb250LXNpemU6IDAuOGVtO1xufVxuLnByb2plY3RzLWxpc3Qge1xuICBtYXJnaW4tdG9wOiA1cHg7XG4gIHBhZGRpbmctbGVmdDogMTBweDtcbiAgbWFyZ2luLWJvdHRvbTogMTBweDtcbiAgb3ZlcmZsb3c6IGF1dG87XG59XG4ucHJvamVjdHMtbGlzdCAucHJvamVjdHMtbGlzdF9faXRlbSB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgcGFkZGluZy1yaWdodDogMjBweDtcbn1cbi5wcm9qZWN0cy1saXN0IC5wcm9qZWN0cy1saXN0X19pdGVtX19pY29uIHtcbiAgaGVpZ2h0OiAxcmVtO1xuICB2ZXJ0aWNhbC1hbGlnbjogLTEwJTtcbn1cbi5wcm9qZWN0cy1saXN0IC5wcm9qZWN0cy1saXN0X19pdGVtX19sYWJlbCB7XG4gIGNvbG9yOiAjMDM2NmQ2O1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgbWFyZ2luLWxlZnQ6IDEwcHg7XG59XG4ucHJvamVjdHMtbGlzdCAucHJvamVjdHMtbGlzdF9faXRlbV9fbGFiZWw6aG92ZXIge1xuICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcbn1cbi5wcm9qZWN0cy1saXN0IC5wcm9qZWN0cy1saXN0X19pdGVtX19hY3Rpb24ge1xuICB2aXNpYmlsaXR5OiBoaWRkZW47XG4gIGRpc3BsYXk6IGlubGluZS1mbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIGhlaWdodDogMTAwJTtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBtYXJnaW4tbGVmdDogNXB4O1xuICBmaWxsOiAjZDNkNGQ1O1xufVxuLnByb2plY3RzLWxpc3QgLnByb2plY3RzLWxpc3RfX2l0ZW1fX2FjdGlvbjpob3ZlciB7XG4gIGZpbGw6ICNiMWIyYjM7XG59XG4ucHJvamVjdHMtbGlzdCAucHJvamVjdHMtbGlzdF9faXRlbTpob3ZlciAucHJvamVjdHMtbGlzdF9faXRlbV9fYWN0aW9uIHtcbiAgdmlzaWJpbGl0eTogdmlzaWJsZTtcbn1cbi8qIyBzb3VyY2VNYXBwaW5nVVJMPXNyYy9hcHAvdmlld3MvcHJvamVjdHMtbGlzdC9wcm9qZWN0cy1saXN0LmNvbXBvbmVudC5jc3MubWFwICovIl19 */"]
     });
     /*@__PURE__*/
 
@@ -2057,6 +2142,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           type: _core_services_github_service__WEBPACK_IMPORTED_MODULE_1__["GithubService"]
         }, {
           type: _core_services_project_service__WEBPACK_IMPORTED_MODULE_2__["ProjectService"]
+        }, {
+          type: _core_services_fav_service__WEBPACK_IMPORTED_MODULE_3__["FavService"]
         }];
       }, null);
     })();
@@ -2145,6 +2232,97 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }], function () {
         return [];
       }, null);
+    })();
+    /***/
+
+  },
+
+  /***/
+  "./src/app/core/services/fav.service.ts":
+  /*!**********************************************!*\
+    !*** ./src/app/core/services/fav.service.ts ***!
+    \**********************************************/
+
+  /*! exports provided: FavService */
+
+  /***/
+  function srcAppCoreServicesFavServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "FavService", function () {
+      return FavService;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+    var FavService = /*#__PURE__*/function () {
+      function FavService() {
+        _classCallCheck(this, FavService);
+
+        this.favProjects = [];
+      }
+
+      _createClass(FavService, [{
+        key: "addFavProject",
+        value: function addFavProject(project) {
+          this.getFavProjects();
+
+          if (!this.favProjects.find(function (proj) {
+            return proj.id === project.id;
+          })) {
+            this.favProjects.push(project);
+            localStorage.setItem('favProjects', JSON.stringify(this.favProjects));
+          }
+        }
+      }, {
+        key: "getFavProjects",
+        value: function getFavProjects() {
+          this.favProjects = JSON.parse(localStorage.getItem('favProjects')) || [];
+        }
+      }, {
+        key: "removeFavProject",
+        value: function removeFavProject(projectId) {
+          this.getFavProjects();
+          var index = this.favProjects.findIndex(function (proj) {
+            return proj.id === projectId;
+          });
+
+          if (typeof index === 'number') {
+            this.favProjects.splice(index, 1);
+            localStorage.setItem('favProjects', JSON.stringify(this.favProjects));
+          }
+        }
+      }]);
+
+      return FavService;
+    }();
+
+    FavService.ɵfac = function FavService_Factory(t) {
+      return new (t || FavService)();
+    };
+
+    FavService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: FavService,
+      factory: FavService.ɵfac,
+      providedIn: 'root'
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](FavService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+          providedIn: 'root'
+        }]
+      }], null, null);
     })();
     /***/
 
@@ -2567,7 +2745,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 2:
                     if (!_context12.sent) {
-                      _context12.next = 5;
+                      _context12.next = 6;
                       break;
                     }
 
@@ -2578,6 +2756,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     });
 
                   case 5:
+                    return _context12.abrupt("return", _context12.sent);
+
+                  case 6:
                   case "end":
                     return _context12.stop();
                 }
@@ -2748,62 +2929,67 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               while (1) {
                 switch (_context15.prev = _context15.next) {
                   case 0:
-                    _context15.next = 2;
+                    if (this.currentProject && this.currentProject.id === projectId) {
+                      _context15.next = 26;
+                      break;
+                    }
+
+                    _context15.next = 3;
                     return this.githubService.getProject(projectId);
 
-                  case 2:
+                  case 3:
                     this.currentProject = _context15.sent;
-                    _context15.next = 5;
+                    _context15.next = 6;
                     return this.githubService.getProjectColumns(projectId);
 
-                  case 5:
+                  case 6:
                     this.currentProject.columns = _context15.sent;
                     this.projectChanged.emit(this.currentProject);
                     _iterator = _createForOfIteratorHelper(this.currentProject.columns);
-                    _context15.prev = 8;
+                    _context15.prev = 9;
 
                     _iterator.s();
 
-                  case 10:
+                  case 11:
                     if ((_step = _iterator.n()).done) {
-                      _context15.next = 17;
+                      _context15.next = 18;
                       break;
                     }
 
                     col = _step.value;
-                    _context15.next = 14;
+                    _context15.next = 15;
                     return this.githubService.getColumnCards(col.id);
 
-                  case 14:
+                  case 15:
                     col.cards = _context15.sent;
 
-                  case 15:
-                    _context15.next = 10;
+                  case 16:
+                    _context15.next = 11;
                     break;
 
-                  case 17:
-                    _context15.next = 22;
+                  case 18:
+                    _context15.next = 23;
                     break;
 
-                  case 19:
-                    _context15.prev = 19;
-                    _context15.t0 = _context15["catch"](8);
+                  case 20:
+                    _context15.prev = 20;
+                    _context15.t0 = _context15["catch"](9);
 
                     _iterator.e(_context15.t0);
 
-                  case 22:
-                    _context15.prev = 22;
+                  case 23:
+                    _context15.prev = 23;
 
                     _iterator.f();
 
-                    return _context15.finish(22);
+                    return _context15.finish(23);
 
-                  case 25:
+                  case 26:
                   case "end":
                     return _context15.stop();
                 }
               }
-            }, _callee15, this, [[8, 19, 22, 25]]);
+            }, _callee15, this, [[9, 20, 23, 26]]);
           }));
         }
       }, {
